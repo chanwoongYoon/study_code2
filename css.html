@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="index.html"><i class="fa-solid fa-cube"></i></a>
+            <div class="icons">
+                <a class="icon" href=""><i class="fa-solid fa-code"></i></a>
+                <a class="icon" href="css.html" style="cursor:pointer;background-color: var(--empasize_color);border:2px solid var(--empasize_colorLight);border-radius: 20%;">
+                <i class="fa-brands fa-css3-alt"></i></a>
+                <a class="icon" href=""><i class="fa-brands fa-js"></i></a>
+                <a class="icon" href=""><i class="fa-brands fa-git-alt"></i></a>
+                <a class="icon" href=""><i class="fa-brands fa-github"></i></a>
+                <a class="icon" href=""><i class="fa-solid fa-c"></i></a>
+                <a class="icon" href=""><i class="fa-brands fa-python"></i></a>
+                <a class="icon" href=""><i class="fa-solid fa-globe"></i></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="sideBar">
+            <div class="listContent"><div class="arrow"> &#10095;</div>Selecter</div>
+            <div class="listContent"><div class="arrow"> &#10095;</div>Block</div>
+            <div class="listContent"><div class="arrow"> &#10095;</div>Display</div>
+            <div class="listContent"><div class="arrow"> &#10095;</div>Animation</div>
+            <div class="listContent"><div class="arrow"> &#10095;</div>3D</div>
+            <div class="listContent"><div class="arrow"> &#10095;</div></div>
+        </div>
+        <div id="mainContext">
+            <ul>
+                <h1 class="main_theme"><span>1.</span> 선택자</h1>
+                <hr>
+                <li class="box selector" id="selector">
+                    <h3 class="sub_theme">선택자 종류</h3>
+                    <ol class="toggle_window">
+                        <li class="descriptions">전체&emsp;* {}</li>
+                        <li class="descriptions">타입&emsp;span {}</li>
+                        <li class="descriptions">클래스&emsp;.price {}</li>
+                        <li class="descriptions">아이디&emsp;#container {}</li>
+                        <li class="descriptions">속성&emsp;button[type] {}</li>
+                    </ol>
+                </li>
+                <li class="box selector">
+                    <h3 class="sub_theme">선택자 하위요소</h3>
+                    <ol class="toggle_window">
+                        <li class="descriptions">선택자 선택자 {}</li>
+                        <li class="descriptions">선택자 > 선택자 {} - 직계자식요소 선택</li>
+                    </ol>
+                </li>
+                <li class="box selector">
+                    <h3 class="sub_theme">가상 클래스 선택자</h3>
+                    <ol class="toggle_window">
+                        <li class="descriptions">:hover - 마우스가 요소위에 있는 상태일 때</li>
+                        <li class="descriptions">:active - 요소가 사용자에 의해 활성화</li>
+                        <li class="descriptions">:focus - 입력필드,링크등의 요소가 포커스 받은 상태</li>
+                        <li class="descriptions">:checked - 라디오,체크박스 등의 입력필드가 선택된 상태</li>
+                    </ol>
+                </li>
+            </ul>
+            <ul>
+                <h1 class="main_theme"><span>2.</span> 텍스트</h1>
+                <hr>
+                <li class="box selector">
+                    <h3 class="sub_theme">텍스트 조정</h3>
+                    <ol class="toggle_window">
+                        <li class="descriptions">
+                            font-family: 폰트지정<br>
+                            &emsp;font-family:"궁서체","돋움",sans-serif;
+                        </li>
+                        <li class="descriptions">
+                            font-size: 글자 크기 지정<br>         
+                            &emsp;font-size:절대단위(px,pt)/상대단위(em,rem);<br>
+                            &emsp;&emsp;백분율: 부모요소의 폰트크기에 상대적인 단위<br>
+                            &emsp;&emsp;em:부모 요소의 폰트크기에 상대적 단위<br>
+                            &emsp;&emsp;rem:최고 부모 요소의 폰트크기에 상대적 단위
+                        </li>
+                        <li class="descriptions">
+                            font-style: 스타일 정의<br>
+                            &emsp;font-style: normal/italic(이탤릭체)/oblique(폰트 그냥 기울임 처리)
+                        </li>
+                        <li class="descriptions">
+                            font-weight: 폰트의 두께 설정<br>
+                            &emsp;font-weight: 키워드(normal{400},bold{700})/숫자(100,200...900)
+                        </li>
+                        <li class="descriptions">
+                            색상:<br>
+                            &emsp;color:색상명/hex코드/rgb/rgba
+                        </li>
+                    </ol>
+                </li>
+                <li class="box selector">
+                    <h3 class="sub_theme">텍스트 레이아웃</h3>
+                    <ol class="toggle_window">
+                        <li class="descriptions">
+                            line-height: 텍스트 줄 간격<br>
+                            &emsp;line-height:숫자(배수)/백분율(%)/크기단위(px,em)등
+                            &emsp;line-height값에서 text세로 크기 뺀 값을 위아래에 배치
+                        </li>
+                        <li class="descriptions">
+                            text-align: 텍스트 수평 정렬 방식<br>         
+                            &emsp;text-align:left/right/center/justify/start/end<br>
+                        </li>
+                        <li class="descriptions">
+                            letter-spacing:"글자"간 간격<br>
+                            &emsp;letter-spacing:크기단위(px,em)
+                        </li>
+                        <li class="descriptions">
+                            word-spacing:"단어"사이의 간격<br>
+                            &emsp;word-spacing:크기단위(px,em)
+                        </li>
+                        <li class="descriptions">
+                            background-color:배경색<br>
+                            &emsp;background-color:#00FF00;
+                        </li>
+                        <li class="descriptions">
+                            background-image:배경이미지<br>
+                            &emsp;background-image:url('PIA_sad.jpg')
+                        </li>
+                        <li class="descriptions">
+                            background-size:배경 맞춤<br>
+                            &emsp;background-size:auto/cover/container
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            <ul>
+                <h1 class="main_theme"><span>3.</span> 움직이기</h1>
+                <hr>
+                <li class="box selector">
+                    <h3 class="sub_theme">요소 움직이기</h3>
+                    <ol class="toggle_window">
+                        <li class="descriptions">
+                            translate(x, y):요소를 X축(수평)과 Y축(수직)으로 이동합니다.<br>
+                            &emsp;transform: translate(50px, 100px);
+                        </li>
+                        <li class="descriptions">
+                            translateX(x):요소를 X축으로만 이동합니다.<br>         
+                            &emsp;transform: translateX(-50%); - [자기 자신의 크기의 50%이동]
+                        </li>
+                        <li class="descriptions">
+                            translateY(y):요소를 Y축으로만 이동합니다.<br>
+                            &emsp;transform: translateY(2rem);
+                        </li>
+                        <li class="descriptions">
+                            translateZ(z):요소를 Z축(깊이)으로 이동합니다. (3D)<br>
+                            transform: translateZ(20px);
+                        </li>
+                        <li class="descriptions">
+                            translate3d(x, y, z):요소를 3차원 공간에서 이동합니다.<br>
+                            &emsp;transform: translate3d(10px, 5px, -5px);
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            <ul>
+                <h1 class="main_theme"><span>4.</span> 블록</h1>
+                <hr>
+                <li class="box selector">
+                    <h3 class="sub_theme">블록 꾸미기</h3>
+                    <ol class="toggle_window">
+                        <li class="descriptions">
+                            border-width:테두리<br>
+                            &emsp;border-width:크기단위(px,em)/thin/medium/whick
+                        </li>
+                        <li class="descriptions">
+                            border-style:테두리<br>         
+                            &emsp;border-style:none/solid/dotted/double
+                        </li>
+                        <li class="descriptions">
+                            box-sizing:컨텐츠 크기 = 패딩,보더<br>
+                            &emsp;box-sizing:content-box/border-box
+                        </li>
+                        <li class="descriptions">
+                            display:요소의 배치방식 정의<br>
+                            &emsp;display:block/inline/inline-block/none/grid
+                        </li>
+                        <li class="descriptions">
+                            position:요소의 배치방식 정함<br>
+                            &emsp;position:static/relative/absolute/fixed/sticky
+                        </li>
+                        <li class="descriptions">
+                            z-index:z축 설정<br>
+                            &emsp;z-index:숫자(클수록 앞)
+                        </li>
+                        <li class="descriptions">
+                            float:요소를 페이지 특정위치 떠오르게<br>
+                            &emsp;float:left/right/none
+                        </li>
+                        <li class="descriptions">
+                            overflow: hidden<br>
+                            &emsp;박스안의 요소들이 경계 넘지 않도록 조정
+                        </li>
+                        <li class="descriptions">
+                            box-shadow:박스 그림자<br>
+                            &emsp;box-shadow:[그림자 수평위치(우로)][그림자 수직 위치(아래로)][블러][번짐정도][그림자 색상]
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            <ul>
+                <h1 class="main_theme"><span>5.</span> 플렉스 박스</h1>
+                <hr>
+                <li class="box selector">
+                    <h3 class="sub_theme">플렉스 박스 부모</h3>
+                    <ol class="toggle_window">
+                        <li class="descriptions">
+                            container:아이템 담는 컨테이너<br>
+                            &emsp;display:flex; 로 선언
+                        </li>
+                        <li class="descriptions">
+                            flex-direction:정렬 방향 설정<br>         
+                            &emsp;flex-direction:row/column/row-reverse/column-reverse
+                        </li>
+                        <li class="descriptions">
+                            flex-wrap:한 줄 유지,여러 줄 가능 설정  <br>
+                            &emsp;flex-wrap:nowrap/wrap
+                        </li>
+                        <li class="descriptions">
+                            justify-content:기본축 정렬(flex-direction에 의해 결정) <br>
+                            &emsp;justify-content:flex-start/flex-end/center/space-between/space-around/space-evenly<br>
+                            &emsp;&emsp;space-between:자식요소의 첫번째 요소와 마지맏 요소는 양끝, 사이에 여백은 균등히 분배<br>
+                            &emsp;&emsp;space-around:모든요소의 "좌우"여백 균등히 분배 (맨 끝의 여백이 X라면, 사이 여백 2X)<br>
+                            &emsp;&emsp;space-evenly:모든 여백 균등히 분배
+                        </li>
+                        <li class="descriptions">
+                            align-items:반대축으로 요소 정리<br>
+                            &emsp;align-items:flex-start/flex-end/center/stretch/baseline<br>
+                            &emsp;&emsp;stretch:부모 높이에 맞춰 늘어남<br>
+                            &emsp;&emsp;baseline:폰트 기준선에 맞춰 늘어남
+                        </li>
+                        <li class="descriptions">
+                            gap:"아이템들"의 행 또는 열 사이의 간격을 설정하는 속성<br>
+                            &emsp;gap:(숫자)px
+                        </li>
+                    </ol>
+                </li>
+                <li class="box selector">
+                    <h3 class="sub_theme">플렉스 박스 자식</h3>
+                    <ol class="toggle_window">
+                        <li class="descriptions">
+                            order:(숫자)<br>
+                            &emsp;숫자가 작을 수록 앞 순서를 유지
+                        </li>
+                        <li class="descriptions">
+                            flex:컨테이너 크기에 따른 아이템의 크기
+                            &emsp;flex-grow:아이템 얼마나 커질 지<br>
+                            &emsp;flex-shrink:아이템 얼마나 작아질 지<br>
+                            &emsp;flex-basis:아이템 기본 크기 정함<br>
+                            &emsp;flex:flex-grow flex-shirnk flex-basis
+                        </li>
+                        <li class="descriptions">
+                            align-self:반대축 정렬<br>
+                            &emsp;align-self:auto/flex-start/flex-end/center/space-between/space-around/space-evenly<br>
+                            &emsp;&emsp;space-between:자식요소의 첫번째 요소와 마지맏 요소는 양끝, 사이에 여백은 균등히 분배<br>
+                            &emsp;&emsp;space-around:모든요소의 "좌우"여백 균등히 분배 (맨 끝의 여백이 X라면, 사이 여백 2X)<br>
+                            &emsp;&emsp;space-evenly:모든 여백 균등히 분배
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            <ul>
+                <h1 class="main_theme"><span>6.</span> 그리드</h1>
+                <hr>
+                <li class="box selector">
+                    <h3 class="sub_theme">그리드 부모</h3>
+                    <ol class="toggle_window">
+                        <li class="descriptions">
+                            grid-template-rows:크기단위(px,em,%)/repeat()/fr<br>
+                            &emsp;grid-template-rows:1fr 2fr 1fr (그리드 비율 1:2:1)
+                        </li>
+                        <li class="descriptions">
+                            grid-template-columns:크기단위(px,em,%)/repeat()/fr<br>
+                            &emsp;grid-template-columns:1fr 2fr 1fr  == repeat(3,1fr)
+                        </li>
+                        <li class="descriptions">
+                            gap:"아이템들"의 행 또는 열 사이의 간격을 설정하는 속성<br>
+                            &emsp;gap:(숫자)px
+                        </li>
+                        <li class="descriptions">
+                            grid-row,column-start,end:start~end부분 점유 가능<br>
+                            &emsp;grid-row,column-start,end:숫자(grid-template-rows.columns 이내)<br>
+                            &emsp;grid-row:2/3 = grid-row:2/span1(span1 == 2+1 == 3)<br>
+                            &emsp;grid-column:1/4 = grid-column:1/span3(span3 == 1+3 == 4)
+                        </li>
+                        <li class="descriptions">
+                            grid-template-areas:지정 부분 이름 붙여주는 거
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            <ul>
+                <h1 class="main_theme"><span>7.</span> 애니메이션</h1>
+                <hr>
+                <li class="box selector">
+                    <h3 class="sub_theme">효과와 애니메이션</h3>
+                    <ol class="toggle_window">
+                        <li class="descriptions">
+                            filter
+                        </li>
+                        <li class="descriptions">
+                            opacity
+                        </li>
+                        <li class="descriptions">
+                            box-shadow
+                        </li>
+                        <li class="descriptions">
+                            transform
+                        </li>
+                        <li class="descriptions">
+                            animation
+                        </li>
+                        <li class="descriptions">
+                            transition
+                        </li>
+                        <li class="descriptions">
+                            타이밍 함수
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            <ul>
+                <h1 class="main_theme"><span>8.</span> 엔티티</h1>
+                <hr>
+                <li class="box selector">
+                    <h3 class="sub_theme">엔티티</h3>
+                    <ol class="toggle_window">
+                        <li class="descriptions">저작권 기호 다이아모양 등을 안전하게 구현가능</li>
+                        <p class="paragraph">& #####;</p>
+                    </or>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
