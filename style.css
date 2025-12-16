@@ -1,149 +1,24 @@
 :root{
-    --main_color:#363b4e; 
-    --sub_color1:#4f3b78; 
-    --sub_color1Light:#5b6675;
-    --sub_color2:#927fbf; 
+    --bg_Dark:rgb(33, 33, 33);
+    --bg:rgb(77, 77, 78);
+    --bg_Light:rgb(141, 140, 140);
 
-    --empasize_colorDark:#582c0d; 
-    --empasize_color:#EB7725; 
-    --empasize_colorLight:#fdb17a;
-
-    --buttonSize:40px;
-    --headerHeight: 120px;
-    --sidebarWidth: 200px;
-}
-
-*{
-    box-sizing:border-box;
+    --sideBarWidth:18vw;
 }
 
 html{
     font-size: 62.5%;
 }
 
-body{
-    margin:0px;
-}
-
 main{
+    width:100vw;
+    height:100vh;
+}
+
+/* 사이드바 */
+#sideBar{
     height:100%;
-    margin:0px;
-    padding:0px;
-
-    background:var(--main_color);
-    background-repeat: none;
-
-    display:flex;
-    align-items: center;
+    width:var(--sideBarWidth);
+    background-color: aqua;
 }
 
-/* --------------------------- 헤더 ---------------------------*/
-
-header{
-    background-color: var(--sub_color1);
-    height: var(--headerHeight);
-    width:100%;
-    border-bottom: 1px solid var(--sub_color2);
-    position:fixed;
-    top:0;
-}
-
-nav{
-    height:100%;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:10px 35px;
-}
-
-.logo{
-    color:white;
-    text-decoration: none;
-    margin-left:30px;
-    font-size: 70px;
-    display:flex;
-    align-items: center;
-    justify-content:center;
-}
-
-.logo:hover{
-    color:var(--empasize_color);
-}
-
-.icons{
-    width:40%;
-    height:100%;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.icons i{
-    font-size: 34px; 
-    color:white;
-}
-
-.icon{
-    color:white;
-    text-decoration: none;
-    height:50px;
-    width:50px;
-    display:flex;
-    align-items: center;
-    justify-content:center;
-    border: 2px solid transparent;
-}
-
-.icon:hover{
-    /* 2. 크기는 font-size로 조절 */
-    cursor:pointer;
-    background-color: var(--empasize_color);
-    border:2px solid var(--empasize_colorLight);
-    border-radius: 20%;
-}
-/* --------------------------- 사이드바 ---------------------------*/
-.sideBar{
-    height:calc(100vh - var(--headerHeight));
-    width:var(--sidebarWidth);
-    margin-top: var(--headerHeight);
-    border-right: 1px solid var(--sub_color2);
-    color:white;
-    background-color: var(--sub_color1);
-    display: block;
-    position:fixed;
-    top:0;
-}
-
-/* --------------------------- 아코디언 ---------------------------*/
-
-#accordionFlushExample{
-    width:var(--sidebarWidth);
-}
-
-.accordion{
-    --bs-accordion-bg: transparent;
-}
-
-/* --------------------------- 메인컨텐츠 ---------------------------*/
-
-#mainContext{
-    min-height: calc(100vh - var(--headerHeight));
-    height:100%;
-    width:calc(100vw - var(--sidebarWidth) - 1px);
-    margin-left:var(--sidebarWidth);
-    margin-top: var(--headerHeight);
-    color:white;
-}
-
-.main_theme span{
-    color:var(--empasize_color)
-}
-
-.sub_theme:hover{
-    cursor:pointer;
-    color:var(--empasize_color);
-}
-
-.toggle_window{
-    display:none;
-}
