@@ -17,6 +17,10 @@
     box-sizing:border-box;
 }
 
+html{
+    font-size: 62.5%;
+}
+
 body{
     margin:0px;
 }
@@ -102,7 +106,6 @@ nav{
     height:calc(100vh - var(--headerHeight));
     width:var(--sidebarWidth);
     margin-top: var(--headerHeight);
-    padding:10px;
     border-right: 1px solid var(--sub_color2);
     color:white;
     background-color: var(--sub_color1);
@@ -111,30 +114,14 @@ nav{
     top:0;
 }
 
-.listContent{
-    display:flex;
-    align-items: center;
-    font-size: 22px;
-    font-weight: 600;
-    border: 2px solid transparent;
-    margin-bottom:5px;
+/* --------------------------- 아코디언 ---------------------------*/
+
+#accordionFlushExample{
+    width:var(--sidebarWidth);
 }
 
-.listContent:hover{
-    cursor:pointer;
-    background-color: var(--empasize_color);
-    border:2px solid var(--empasize_colorLight);
-    border-radius: 20px;
-}
-
-.arrow{
-    height: 36px;
-    width: 36px;
-    display:inline;
-    margin:10px;
-    color:white;
-    font-size: 30px;
-    text-align: center;
+.accordion{
+    --bs-accordion-bg: transparent;
 }
 
 /* --------------------------- 메인컨텐츠 ---------------------------*/
