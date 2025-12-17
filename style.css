@@ -13,6 +13,9 @@ html{
 main{
     width:100vw;
     height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* 사이드바 */
@@ -22,3 +25,16 @@ main{
     background-color: aqua;
 }
 
+/* 메인 컨텐츠 */
+#mainContent{
+    width: calc(100vw - var(--sideBarWidth));
+    height:100%;
+}
+
+.subject{
+    width:30%;
+}
+
+.subject_val{
+    color:red
+}
